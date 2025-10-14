@@ -1,0 +1,74 @@
+{
+  "questions": [
+    {
+      "QID": "Q1",
+      "Question": "What is the current fire danger rating?",
+      "Section": "Fire Danger Assessment",
+      "Weight": 1.0,
+      "Type": "multiple_choice",
+      "Options": [
+        { "value": 0, "label": "Low" },
+        { "value": 1, "label": "Moderate" },
+        { "value": 2, "label": "High" },
+        { "value": 3, "label": "Very High" },
+        { "value": 4, "label": "Extreme" }
+      ]
+    },
+    {
+      "QID": "Q2", 
+      "Question": "What is the wind speed?",
+      "Section": "Weather Conditions",
+      "Weight": 1.2,
+      "Type": "multiple_choice",
+      "Options": [
+        { "value": 0, "label": "0-5 mph" },
+        { "value": 1, "label": "6-15 mph" },
+        { "value": 2, "label": "16-25 mph" },
+        { "value": 3, "label": "26-40 mph" },
+        { "value": 4, "label": "40+ mph" }
+      ]
+    },
+    {
+      "QID": "Q3",
+      "Question": "What is the relative humidity?",
+      "Section": "Weather Conditions", 
+      "Weight": 0.8,
+      "Type": "multiple_choice",
+      "Options": [
+        { "value": 0, "label": "80%+" },
+        { "value": 1, "label": "60-79%" },
+        { "value": 2, "label": "40-59%" },
+        { "value": 3, "label": "20-39%" },
+        { "value": 4, "label": "Under 20%" }
+      ]
+    },
+    {
+      "QID": "Q4",
+      "Question": "What is the fuel moisture content?",
+      "Section": "Fuel Conditions",
+      "Weight": 1.5,
+      "Type": "multiple_choice", 
+      "Options": [
+        { "value": 0, "label": "Very High (15%+)" },
+        { "value": 1, "label": "High (10-14%)" },
+        { "value": 2, "label": "Moderate (5-9%)" },
+        { "value": 3, "label": "Low (2-4%)" },
+        { "value": 4, "label": "Very Low (Under 2%)" }
+      ]
+    },
+    {
+      "QID": "Q5",
+      "Question": "What is the terrain slope?",
+      "Section": "Topography",
+      "Weight": 1.1,
+      "Type": "multiple_choice",
+      "Options": [
+        { "value": 0, "label": "Flat (0-5%)" },
+        { "value": 1, "label": "Gentle (6-15%)" },
+        { "value": 2, "label": "Moderate (16-30%)" },
+        { "value": 3, "label": "Steep (31-50%)" },
+        { "value": 4, "label": "Very Steep (50%+)" }
+      ]
+    }
+  ]
+}
