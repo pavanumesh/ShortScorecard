@@ -47,6 +47,7 @@ const QuestionCard = ({ question, answer, onAnswerChange }: QuestionCardProps) =
         <div className="flex items-start gap-3">
           <div className="flex-1">
             <Label className="text-base font-medium text-card-foreground leading-relaxed">
+              <span className="font-semibold text-primary mr-2">{question.QID}</span>
               {question.Question}
             </Label>
           </div>
@@ -63,7 +64,9 @@ const QuestionCard = ({ question, answer, onAnswerChange }: QuestionCardProps) =
 
         {showInfo && question.Tooltip && (
           <div className="bg-accent p-4 rounded-lg border border-border">
-            <p className="text-sm text-accent-foreground">{question.Tooltip}</p>
+            <div className="text-sm text-accent-foreground whitespace-pre-line leading-relaxed">
+              {question.Tooltip}
+            </div>
           </div>
         )}
 

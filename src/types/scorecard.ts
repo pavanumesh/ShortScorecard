@@ -36,3 +36,6 @@ export interface SectionScore {
   average: number;
   count: number;
 }
+/** One row from the "Community Information" sheet. Keys match sheet headers (e.g. Question, Answer). */
+export type CommunityInfoItem = Record<string, unknown>;
+
