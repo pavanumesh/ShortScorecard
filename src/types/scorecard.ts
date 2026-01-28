@@ -14,7 +14,7 @@ export interface Question {
 
 export interface Answer {
   qid: string;
-  score: number | "N/A";
+  score: number | "N/A" | undefined;
   notes: string;
 }
 

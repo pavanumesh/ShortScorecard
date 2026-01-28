@@ -35,11 +35,8 @@ const QuestionCard = ({ question, answer, onAnswerChange }: QuestionCardProps) =
     { value: "2", label: question.Scale2 },
     { value: "3", label: question.Scale3 },
     { value: "4", label: question.Scale4 },
+    { value: "N/A", label: "Not Applicable" },
   ];
-
-  if (question.AllowNA === "TRUE") {
-    scaleOptions.push({ value: "N/A", label: "N/A - Not Applicable" });
-  }
 
   return (
     <Card className="p-6 bg-card hover:shadow-[var(--shadow-elevated)] transition-shadow">
@@ -75,16 +72,22 @@ const QuestionCard = ({ question, answer, onAnswerChange }: QuestionCardProps) =
             Score
           </Label>
           <Select
-            value={answer.score === "N/A" ? "N/A" : answer.score?.toString()}
+            value={
+              answer.score === "N/A" 
+                ? "N/A" 
+                : answer.score === 0 
+                  ? "0" 
+                  : (answer.score !== undefined && answer.score !== null ? answer.score.toString() : undefined)
+            }
             onValueChange={handleScoreChange}
           >
             <SelectTrigger id={`score-${question.QID}`} className="w-full">
-              <SelectValue placeholder="Select a score..." />
+              <SelectValue placeholder="Not selected" />
             </SelectTrigger>
             <SelectContent>
               {scaleOptions.map((option) => (
                 <SelectItem key={option.value} value={option.value}>
-                  {option.value} - {option.label}
+                  {option.value === "0" ? `0 - ${option.label}` : `${option.value} - ${option.label}`}
                 </SelectItem>
               ))}
             </SelectContent>
